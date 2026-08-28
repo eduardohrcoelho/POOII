@@ -20,3 +20,8 @@ public class divisaoPorZeroExcp {
         div.realizarDivisao(4,1);
     }
 }
+/*
+Não é apropriado que o handler do erro seja incluso dentro do
+método porque atribui a responsabilidade de tratamento diretamente para o método
+e o mais apropriado é que o handler fique onde o método é chamado
+ */
