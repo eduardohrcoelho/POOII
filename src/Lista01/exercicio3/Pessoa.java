@@ -1,4 +1,4 @@
-package Lista01.exercicio03;
+package Lista01.exercicio3;
 
 public abstract class Pessoa {
     private String nome;

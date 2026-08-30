@@ -1,4 +1,4 @@
-package Lista01.exercicio03;
+package Lista01.exercicio3;
 
 public class TestaPessoa {
     public static void main(String[] args){

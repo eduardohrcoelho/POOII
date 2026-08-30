@@ -1,8 +1,8 @@
-package Lista01.exercicio03;
+package Lista01.exercicio3;
 
-public class PessoaFisica extends Pessoa{
+public class PessoaJuridica extends Pessoa{
 
-    public PessoaFisica(String nome, int idade, long id) throws Exception, InvalidIDException{
+    public PessoaJuridica(String nome, int idade, long id) throws Exception, InvalidIDException{
         super(nome, idade, id);
     }
 
@@ -13,5 +13,4 @@ public class PessoaFisica extends Pessoa{
 
         this.id = id;
     }
-
 }
