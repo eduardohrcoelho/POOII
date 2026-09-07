@@ -1,44 +1,42 @@
 package Lista03.exercicio6;
 
 public abstract class Empresa {
-    private String nome = "Empresa ABC";
-
-    private static double impostoGeral = 0.15;
-
-    public void baterPonto(){
-        System.out.println("Ponto registrado.");
-    }
-
+    private static String nomeEmpresa = "ABC Company";
+    private double taxaDeImposto = 1000.0;
+    private static int qtdFunc = 1000;
+    
     public abstract void pagarSalario();
 
+    public void impostoPago(){
+        System.out.println("Total de imposto pago pela empresa: " + taxaDeImposto);
+    }
+
     public class Funcionario{
-        public void testarAcessos() {
-            System.out.println("--- FUNCIONÁRIO ---");
-            System.out.println("Acessa nome: " + nome);
-            System.out.println("Acessa imposto: " + impostoGeral);
-            baterPonto();
-            pagarSalario();
+        private int id = 1;
+        private String nomeFunc = "João";
+
+        public void dadosFuncionario(){
+            System.out.println("Funcionario: " + nomeFunc + "\nID: " + id + "\nEmpresa: " + nomeEmpresa);
         }
     }
 
     public static class Informacoes{
-        public void testarAcessos() {
-            System.out.println("\n--- INFORMAÇÕES ---");
-            System.out.println("Acessa imposto: " + impostoGeral);
+        public void imprimeInfo(){
+            System.out.println("Empresa: " + nomeEmpresa + "\nQuantidade de funcionarios: " + qtdFunc);
         }
     }
 
     public static void main(String[] args) {
-        Empresa empresa = new Empresa(){
-            @Override
+        Empresa e = new Empresa() {
             public void pagarSalario(){
-                System.out.println("Pagemento realizado!");
+                System.out.println("Salario pago!");
             }
         };
 
-        Empresa.Funcionario f = empresa.new Funcionario();
-        f.testarAcessos();
-        Empresa.Informacoes i = new Empresa.Informacoes();
-        i.testarAcessos();
+        Empresa.Funcionario func = e.new Funcionario();
+        func.dadosFuncionario();
+
+        Empresa.Informacoes info = new Empresa.Informacoes();
+        info.imprimeInfo();
     }
 }
