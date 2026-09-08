@@ -10,7 +10,7 @@ public class Externa {
             }
         }
 
-        textoLocal = "oi"; 
+        //textoLocal = "oi"; 
     }
 }
 
